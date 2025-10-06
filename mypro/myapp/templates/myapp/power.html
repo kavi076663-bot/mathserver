@@ -1,0 +1,61 @@
+<html>
+<head>
+<title>Power Calculator</title>
+<h1 style="color:purple">
+    POWER OF LAMP FILAMENT
+</h1>
+<style type="text/css">
+body {
+    background-color: blue;
+}
+.edge {
+    width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 250px;
+    padding-left: 300px;
+}
+.box {
+    display: block;
+    border: grey;
+    width: 1000px;
+    min-height: 300px;
+    font-size: 20px; 
+    background-color: red;
+}
+.formelt { 
+    color: cyan; 
+    text-align: center; 
+    margin-top: 7px; 
+    margin-bottom: 6px;
+}
+h1 {
+    color: skyblue;
+    text-align: center;
+    padding-top: 20px;
+}    
+</style>
+</head>
+<body>
+    <div class="edge">
+    <div class="box">
+    <h1>Power Calculator</h1>
+    <form method="POST">
+    {% csrf_token %}
+    <div class="formelt">
+        Current (I): <input type="text" name="Current" value="{{I}}"></input> (in Amperes)<br/>
+    </div>
+    <div class="formelt">
+        Resistance (R): <input type="text" name="Resistance" value="{{R}}"></input> (in Ohms)<br/>
+    </div>
+    <div class="formelt">
+        <input type="submit" value="Calculate"></input><br/>
+    </div>
+    <div class="formelt">
+        Power (P): <input type="text" name="Power" value="{{P}}"></input> (in Watts)<br/>
+    </div>
+    </form>
+    </div>
+    </div>
+</body>
+</html>
